@@ -2,7 +2,7 @@
 # Variables
 variables:
   Major: $[format('{0:yyyy}', pipeline.startTime)]
-  Minor: $[format('{0:M}', pipeline.startTime)]
+  Minor: $[format('{0:m}', pipeline.startTime)]
   Patch: $[counter(format('{0}.{1}', variables['IronDrawingMajorVersion'], variables['IronDrawingMinorVersion']), 1)]
 
 trigger: none
