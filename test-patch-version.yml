@@ -1,9 +1,9 @@
 ##### DECLARATIONS #####
 # Variables
 variables:
-  - group: IronDrawingVersions
-  - name: NuGetVersion
-    value: $(IronDrawingMajorVersion).$(IronDrawingMinorVersion).$(IronDrawingPatchVersion)
+  Major: $[format('{0:yyyy}', pipeline.startTime)]
+  Minor: $[format('{0:M}', pipeline.startTime)]
+  Patch: $[counter(format('{0}.{1}', variables['IronDrawingMajorVersion'], variables['IronDrawingMinorVersion']), 1)]
 
 trigger: none
 
@@ -12,8 +12,8 @@ pool:
 
 steps:
 - script: |
-    echo "Version: $(IronDrawingMajorVersion).$(IronDrawingMinorVersion).$(Patch)"
+    echo "Version: $(Major).$(Minor).$(Patch)"
   displayName: 'Read IronDrawing Version'
 - script: |
-    echo "Version: $(IronDrawingMajorVersion).$(IronDrawingMinorVersion).$(Patch)"
+    echo "Version: $(Major).$(Minor).$(Patch)"
   displayName: 'Read IronDrawing Version (Again)'
