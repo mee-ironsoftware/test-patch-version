@@ -1,7 +1,7 @@
 ##### DECLARATIONS #####
 # Variables
 variables:
-  - group: IronPdfVersions
+  - group: IronDrawingVersions
   - name: NuGetVersion
     value: $(IronPdfMajorVersion).$(IronPdfMinorVersion).$(IronDrawingPatchVersion)
 
