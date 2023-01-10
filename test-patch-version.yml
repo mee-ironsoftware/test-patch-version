@@ -12,6 +12,7 @@ pool:
 
 steps:
 - script: |
+    echo Version (Variables): $(Major).$(Minor).$(Patch)
     echo Version: $(IronDrawingMajorVersion).$(IronDrawingMinorVersion).$(IronDrawingPatchVersion)
     echo NuGetVersion: $(NuGetVersion)
   displayName: 'Read IronDrawing Version'
