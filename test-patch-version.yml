@@ -3,7 +3,7 @@
 variables:
   - group: IronDrawingVersions
   - name: NuGetVersion
-    value: $(IronPdfMajorVersion).$(IronPdfMinorVersion).$(IronDrawingPatchVersion)
+    value: $(IronDrawingMajorVersion).$(IronDrawingMinorVersion).$(IronDrawingPatchVersion)
 
 trigger: none
 
